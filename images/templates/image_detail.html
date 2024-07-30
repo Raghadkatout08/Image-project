@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Image Details{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="my-4">Image Details</h1>
+    <div class="card">
+        <img src="{{ image.largeImageURL }}" class="card-img-top" alt="{{ image.tags }}">
+        <div class="card-body">
+            <h5 class="card-title">{{ image.tags }}</h5>
+            <div class="row mb-4">
+                <!-- Statistics Columns -->
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col">
+                            <i class="fas fa-eye"></i> <strong>Views:</strong> {{ image.views }}
+                        </div>
+                        <div class="col">
+                            <i class="fas fa-download"></i> <strong>Downloads:</strong> {{ image.downloads }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <i class="fas fa-heart"></i> <strong>Likes:</strong> {{ image.likes }}
+                        </div>
+                        <div class="col">
+                            <i class="fas fa-comment"></i> <strong>Comments:</strong> {{ image.comments }}
+                        </div>
+                    </div>
+                </div>
+                <!-- User Information Column -->
+                <div class="col-md-6 d-flex flex-column align-items-center text-center">
+                    <h6 class="my-4">Uploaded by</h6>
+                    <img src="{{ image.userImageURL }}" class="img-fluid rounded-circle" alt="{{ image.user }}" style="max-width: 150px; height: auto;">
+                    <p class="mt-2">{{ image.user }}</p>
+                </div>
+            </div>
+            <a href="{% url 'image_list' %}" class="btn btn-primary">Back to List</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

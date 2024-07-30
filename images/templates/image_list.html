@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Image List{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h1 class="my-4 text-center">Food Images Collection</h1>
+        <div class="row">
+            {% for image in images %}
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card border-light rounded-lg card-lg">
+                        <div class="card-img-container">
+                            <img src="{{ image.largeImageURL }}" class="user-img" alt="{{ image.tags }}">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-muted">{{ image.tags }}</h5>
+                            <a href="{% url 'food_details' image.id %}" class="btn btn-primary w-100">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
