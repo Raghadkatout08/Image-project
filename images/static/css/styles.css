@@ -1,0 +1,152 @@
+body {
+    background-color: #f0f2f5;
+    padding-top: 20px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+h1 {
+    color: #343a40;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+    padding: 15px;
+
+    
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    width: 100%; 
+    height: auto; 
+    max-height: 500px; 
+    object-fit: contain; 
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    padding-top: 20px;
+}
+
+.card-body {
+    background-color: #ffffff; 
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem; 
+    color: #007bff; 
+    margin-bottom: 20px; 
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col {
+    display: flex;
+    align-items: center; 
+    font-size: 1.1rem; 
+    margin-bottom: 10px; 
+    padding: 0 15px;
+}
+
+.col i {
+    margin-right: 10px; 
+    color: #007bff; 
+}
+
+.btn-primary {
+    background-color: #007bff; 
+    color: #ffffff; 
+    border: none;
+    border-radius: 0.25rem; 
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none; 
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; 
+}
+
+.btn-back {
+    background-color: #6c757d; 
+    color: #ffffff; 
+    border: none;
+    border-radius: 0.25rem; 
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none; 
+    font-size: 1rem;
+}
+
+.btn-back:hover {
+    background-color: rgb(18, 58, 89); 
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin: 0; 
+    }
+}
+
+
+.card-body .img-fluid {
+    max-width: 150px; 
+    border: 2px solid #007bff; 
+    padding: 5px; 
+}
+
+.img-fluid.rounded-circle {
+    max-width: 50px;
+    height: auto;
+}
+
+.card-body .row {
+    margin-bottom: 1rem;
+}
+
+.card-body .row .col {
+    display: flex;
+    align-items: center;
+}
+
+.card-body .row .col i {
+    margin-right: 0.5rem;
+}
+
+.user-img {
+    width: 100%; 
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 0.5rem; 
+}
+
+.card-img-container {
+    height: 200px; 
+    overflow: hidden;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem; 
+}

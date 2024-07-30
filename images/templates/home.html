@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="my-4">Welcome to the Home Page</h1>
+    <p class="lead">Explore our collection of food images and discover more about your favorite dishes.</p>
+
+    <!-- Buttons -->
+    <div class="text-center">
+        <a href="{% url 'image_list' %}" class="btn btn-primary btn-lg mx-2">View Images</a>
+    </div>
+
+    <!-- Featured Section -->
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <div class="card border-light rounded-lg">
+                <div class="card-body">
+                    <h5 class="card-title">Featured Dish</h5>
+                    <p class="card-text">Check out our featured dish of the month! It's a delicious and popular choice among our users.</p>
+                    <a href="{% url 'image_list' %}" class="btn btn-primary">See More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card border-light rounded-lg">
+                <div class="card-body">
+                    <h5 class="card-title">Chef's Special</h5>
+                    <p class="card-text">Discover the chef's special recipe and see why it's a crowd favorite.</p>
+                    <a href="{% url 'image_list' %}" class="btn btn-primary">Discover More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Latest Updates -->
+    <div class="mt-5">
+        <h2 class="my-4">Latest Updates</h2>
+        <ul class="list-unstyled">
+            <li><i class="fas fa-check-circle"></i> New images added to our collection.</li>
+            <li><i class="fas fa-star"></i> Check out our top-rated dishes.</li>
+            <li><i class="fas fa-calendar-alt"></i> Monthly recipe highlights.</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
